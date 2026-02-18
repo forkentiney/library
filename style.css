@@ -1,12 +1,12 @@
 :root {
-  --bg-dark: hsl(240 9% 13%);
+  --bg-base: hsl(45 100% 98%)
+  --bg-mantle: hsl(240 9% 26%);
   --shadow: hsl(240 9% 5%);
-  --text: hsl(240 10% 94%);
-  --titles: hsl(240 10% 100%);
-  --bg-light: hsl(240 9% 26%);
-  --text-muted: hsl(240 10% 80%);
-  --primary: hsl(224 38% 55%);
-  --secondary: hsl(224 38% 70%);
+  --titles: hsl(195 100% 0%);
+  --text: hsl(195 100% 6%);
+  --text-muted: hsl(195 100% 12%);
+  --primary: hsl(250 17% 49%);
+  --secondary: hsl(179% 48% 38%);
   --danger: hsl(0 75% 60%);
   --warning: hsl(23 100% 63%);
   --success: hsl(98 42% 32%);
@@ -31,7 +31,7 @@ Fira Code: 300-700
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-base);
   font-size: 18px;
   line-height: 1.5;
   overflow-wrap: break-word;
