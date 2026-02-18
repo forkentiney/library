@@ -1,0 +1,72 @@
+:root {
+  --bg-dark: hsl(240 9% 13%);
+  --shadow: hsl(240 9% 5%);
+  --text: hsl(240 10% 94%);
+  --titles: hsl(240 10% 100%);
+  --bg-light: hsl(240 9% 26%);
+  --text-muted: hsl(240 10% 80%);
+  --primary: hsl(224 38% 55%);
+  --secondary: hsl(224 38% 70%);
+  --danger: hsl(0 75% 60%);
+  --warning: hsl(23 100% 63%);
+  --success: hsl(98 42% 32%);
+}
+
+/* 
+EB Garamond: 400-800
+Fira Code: 300-700
+*/
+
+* {
+  margin: 0px;
+  padding: 0px; 
+  border: 0px;
+  font-size: 100%;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  color: inherit;
+  background-color: inherit;
+}
+
+body {
+  background-color: var(--bg-dark);
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  color: var(--text);
+}
+
+h1, h2, h3, h4 {
+  color: var(--titles);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+br {
+  margin: 2em;
+}
