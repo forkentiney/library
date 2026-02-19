@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -73,9 +74,8 @@ header {
 #body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 254px);
-  grid-template-rows: repeat(auto-fill, 600px);
+  grid-template-rows: min-content;
   gap: 1em;
-  min-height: 100vh;
   border: 2px solid var(--text);
   padding: 32px 18px;
 }
@@ -105,7 +105,7 @@ header {
 .icon {
   grid-row: 1;
   grid-column: 1;
-  margin-left: 216px;
-  background-color: transparent;
-  padding: 4px;
+  margin: 4px 4px 0 auto;
+  background-color: var(--bg-base);
+  border-radius: 12px;
 }
