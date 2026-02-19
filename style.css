@@ -6,7 +6,7 @@
   --text: hsl(195 100% 6%);
   --text-muted: hsl(195 100% 12%);
   --primary: hsl(250 17% 49%);
-  --secondary: hsl(179 48% 38%);
+  --secondary: hsl(179 48% 60%);
   --danger: hsl(0 75% 60%);
   --warning: hsl(23 100% 63%);
   --success: hsl(98 42% 32%);
@@ -71,6 +71,10 @@ header {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 #body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 254px);
@@ -129,4 +133,29 @@ header {
   p {
     color: var(--bg-mantle);
   }
+}
+
+form div,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+input {
+  width: 225px;
+  background-color: var(--bg-mantle);
+  box-shadow: 2px 2px 4px var(--shadow) inset;
+  border: 1px solid var(--shadow);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+button {
+  padding: 6px 12px;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  margin: 4px 0;
+  background-color: var(--bg-base);
 }
