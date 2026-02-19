@@ -1,6 +1,6 @@
 :root {
   --bg-base: hsl(45 100% 98%);
-  --bg-mantle: hsl(240 9% 26%);
+  --bg-mantle: hsl(45 100% 92%);
   --shadow: hsl(240 9% 5%);
   --titles: hsl(195 100% 0%);
   --text: hsl(195 100% 6%);
@@ -55,18 +55,8 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 em {
@@ -81,7 +71,41 @@ header {
 }
 
 #body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 254px);
+  grid-template-rows: repeat(auto-fill, 600px);
+  gap: 1em;
   min-height: 100vh;
   border: 2px solid var(--text);
   padding: 32px 18px;
+}
+
+.book {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  background-color: var(--bg-mantle);
+  border: 2px solid var(--text);
+  border-radius: 2px;
+  p {
+    font-size: 18px;
+    padding-left: 4px;
+  }
+  h2 {
+    padding-left: 4px;
+  }
+}
+
+.cover {
+  height: auto;
+  width: 250px;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.icon {
+  grid-row: 1;
+  grid-column: 1;
+  margin-left: 216px;
+  background-color: transparent;
+  padding: 4px;
 }
