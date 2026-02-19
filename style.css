@@ -121,7 +121,7 @@ header {
   background-color: var(--secondary);
 }
 
-#new-button {
+#newButton {
   margin: auto;
   font-family: "Fira Code", sans-serif;
   font-size: 7em;
