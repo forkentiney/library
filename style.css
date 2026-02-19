@@ -6,7 +6,7 @@
   --text: hsl(195 100% 6%);
   --text-muted: hsl(195 100% 12%);
   --primary: hsl(250 17% 49%);
-  --secondary: hsl(179% 48% 38%);
+  --secondary: hsl(179 48% 38%);
   --danger: hsl(0 75% 60%);
   --warning: hsl(23 100% 63%);
   --success: hsl(98 42% 32%);
@@ -108,4 +108,25 @@ header {
   margin: 4px 4px 0 auto;
   background-color: var(--bg-base);
   border-radius: 12px;
+}
+
+#newBook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+#new-button {
+  margin: auto;
+  font-family: "Fira Code", sans-serif;
+  font-size: 7em;
+  text-align: center;
+  user-select: none;
+}
+
+#newBook:hover {
+  p {
+    color: var(--bg-mantle);
+  }
 }
