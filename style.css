@@ -153,6 +153,7 @@ header {
   font-size: 7em;
   text-align: center;
   user-select: none;
+  align-self: center;
 }
 
 #newButton:hover {
