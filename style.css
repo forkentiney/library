@@ -143,17 +143,20 @@ header {
 }
 
 #newButton {
-  margin: auto;
+  background-color: var(--secondary);
+  color: var(--primary);
+  margin-left: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Fira Code", sans-serif;
   font-size: 7em;
   text-align: center;
   user-select: none;
 }
 
-#newBook:hover {
-  p {
-    color: var(--bg-mantle);
-  }
+#newButton:hover {
+  color: var(--bg-mantle);
 }
 
 form div,
