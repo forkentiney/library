@@ -1,4 +1,4 @@
-const joshuasBooks = [];
+let joshuasBooks = [];
 
 const newBookForm = document.querySelector("form");
 const newBook = document.querySelector("#newBook");
@@ -6,13 +6,10 @@ const newButton = document.querySelector("#newButton");
 const uploadButton = document.querySelector("#submitNewBook");
 const cancel = document.querySelector("#cancel");
 
-let title = newBookForm.elements.title;
-let author = newBookForm.elements.author;
-let year = newBookForm.elements.year;
 
 cancel.addEventListener("click", hideForm);
-
 newBook.addEventListener("click", showForm);
+uploadButton.addEventListener("click", addBook);
 
 function hideForm() {
   newButton.classList.remove("hidden");
@@ -24,7 +21,7 @@ function showForm() {
   newBookForm.classList.remove("hidden");
 };
 
-function Book(title, author, year, status) {
+function Book(title, author, year, status, id) {
   if (!new.target) {
     throw Error("You must use the 'new' operator");
   }
@@ -32,7 +29,18 @@ function Book(title, author, year, status) {
   this.author = author;
   this.year = year;
   this.status = status;
+  this.id = id;
 };
 
-function addBook() {
+function addBook(event) {
+  let title = newBookForm.elements.title.value;
+  let author = newBookForm.elements.author.value;
+  let year = newBookForm.elements.year.value;
+  let status = "";
+  let id = crypto.randomUUID();
+
+  joshuasBooks.push(new Book(title, author, year, status, id));
+
+  event.preventDefault();
+  hideForm();
 };
