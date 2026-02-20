@@ -1,12 +1,13 @@
 :root {
   --bg-base: hsl(45 100% 98%);
   --bg-mantle: hsl(45 100% 92%);
+  --bg-crust: hsl(45 100% 85%);
   --shadow: hsl(240 9% 5%);
   --titles: hsl(195 100% 0%);
   --text: hsl(195 100% 6%);
   --text-muted: hsl(195 100% 12%);
-  --primary: hsl(250 17% 49%);
-  --secondary: hsl(179 48% 60%);
+  --primary: hsl(10 85% 21%);
+  --secondary: hsl(10 85% 15%);
   --danger: hsl(0 75% 60%);
   --warning: hsl(23 100% 63%);
   --success: hsl(98 42% 32%);
@@ -87,13 +88,13 @@ header {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  border-top: 24px solid hsl(10 85% 21%);
-  border-bottom: 24px solid hsl(10 85% 21%);
-  border-left: 36px solid hsl(10 85% 21%);
-  border-right: 36px solid hsl(10 85% 21%);
+  border-top: 24px solid var(--primary);
+  border-bottom: 24px solid var(--primary);
+  border-left: 36px solid var(--primary);
+  border-right: 36px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 12px var(--shadow) inset;
-  background-image: repeating-linear-gradient(hsl(10 85% 15%), hsl(10 85% 15%) 332px, hsl(10 85% 21%) 332px, hsl(10 85% 21%) 356px);
+  background-image: repeating-linear-gradient(var(--secondary) 14px, var(--secondary) 332px, var(--primary) 332px, var(--primary) 346px);
   min-height: 15em;
   z-index: 10;
 }
@@ -107,7 +108,8 @@ header {
   border-radius: 2px;
   margin: 36px 0.5px 0px 0px;
   padding: 24px 6px;
-  box-shadow: 8px 0px 8px var(--shadow);
+  box-shadow: 8px -4px 8px var(--shadow),
+              0px 0px 8px 4px var(--bg-crust) inset;
   transition: transform 250ms;
   min-height: 128px;
   max-height: 296px;
