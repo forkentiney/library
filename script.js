@@ -1,23 +1,22 @@
-let joshuasBooks = [];
-
 const newBookForm = document.querySelector("form");
-const newBook = document.querySelector("#newBook");
 const newButton = document.querySelector("#newButton");
 const uploadButton = document.querySelector("#submitNewBook");
 const cancel = document.querySelector("#cancel");
 
+const totalityAndInfinity = new Book("Totality and Infinity", "Emmanual Levinas", 1961, "read", "1");
+
+let joshuasBooks = [totalityAndInfinity];
 
 cancel.addEventListener("click", hideForm);
-newBook.addEventListener("click", showForm);
+newButton.addEventListener("click", showForm);
 uploadButton.addEventListener("click", addBook);
 
-function hideForm() {
-  newButton.classList.remove("hidden");
+function hideForm(event) {
   newBookForm.classList.add("hidden");
+  event.preventDefault();
 };
 
 function showForm() {
-  newButton.classList.add("hidden");
   newBookForm.classList.remove("hidden");
 };
 
