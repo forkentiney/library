@@ -91,6 +91,7 @@ header {
   border-bottom: 24px solid hsl(10 85% 21%);
   border-left: 36px solid hsl(10 85% 21%);
   border-right: 36px solid hsl(10 85% 21%);
+  border-radius: 6px;
   box-shadow: 0px 4px 12px var(--shadow) inset;
   background-color: hsl(10 85% 15%);
   min-height: 15em;
