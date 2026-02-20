@@ -39,7 +39,7 @@ body {
   color: var(--text);
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 0.5em 2em;
   min-height: 100vh;
 }
 
@@ -81,7 +81,7 @@ header {
   grid-template-rows: min-content;
   gap: 1em;
   border: 2px solid var(--text);
-  padding: 32px 18px;
+  padding: 32px;
 }
 
 .book {
