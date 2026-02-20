@@ -43,7 +43,7 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   color: var(--titles);
 }
 
@@ -76,27 +76,45 @@ header {
 }
 
 #body {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 254px);
-  grid-template-rows: min-content;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   border: 2px solid var(--text);
   padding: 32px;
 }
 
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  border-top: 24px solid hsl(10 85% 21%);
+  border-bottom: 24px solid hsl(10 85% 21%);
+  border-left: 36px solid hsl(10 85% 21%);
+  border-right: 36px solid hsl(10 85% 21%);
+  box-shadow: 0px 4px 12px var(--shadow) inset;
+  background-color: hsl(10 85% 15%);
+  min-height: 15em;
+  z-index: 10;
+}
+
 .book {
+  writing-mode: sideways-lr;
   display: grid;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: repeat(2, min-content);
   background-color: var(--bg-mantle);
   border: 2px solid var(--text);
   border-radius: 2px;
-  p {
-    font-size: 18px;
-    padding-left: 4px;
-  }
-  h2 {
-    padding-left: 4px;
-  }
+  margin: 36px 0.5px 0px 0px;
+  padding: 24px 6px;
+  box-shadow: 8px 0px 8px var(--shadow);
+  transition: transform 250ms;
+  min-height: 128px;
+  max-height: 296px;
+  z-index: 5;
+}
+
+.book:hover {
+  transform: translateY(-36px);
 }
 
 .cover {
