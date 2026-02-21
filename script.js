@@ -37,6 +37,10 @@ function Book(title, author, year, status, id) {
 };
 
 function putBooksOnShelf() {
+  while (shelf.childElementCount > 2) {
+    shelf.removeChild(shelf.firstChild);
+  };
+
   for (let i = 0; i < joshuasBooks.length; i++) {
     const book = document.createElement("div");
     const title = document.createElement("h2");
@@ -49,7 +53,7 @@ function putBooksOnShelf() {
 
     book.appendChild(title);
     book.appendChild(author);
-  }
+  };
 }
 
 function addBook(event) {
@@ -60,6 +64,7 @@ function addBook(event) {
   let id = crypto.randomUUID();
 
   joshuasBooks.push(new Book(title, author, year, status, id));
+  putBooksOnShelf();
 
   event.preventDefault();
   hideForm();
