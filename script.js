@@ -16,7 +16,7 @@ cancel.addEventListener("click", hideForm);
 newButton.addEventListener("click", showForm);
 uploadButton.addEventListener("click", addBook);
 
-function hideForm(event) {
+function hideForm() {
   newBookForm.classList.add("hidden");
   event.preventDefault();
 };
@@ -37,7 +37,7 @@ function Book(title, author, year, status, id) {
 };
 
 function putBooksOnShelf() {
-  while (shelf.childElementCount > 2) {
+  while (shelf.childElementCount > 1) {
     shelf.removeChild(shelf.firstChild);
   };
 
@@ -54,7 +54,7 @@ function putBooksOnShelf() {
     book.appendChild(title);
     book.appendChild(author);
   };
-}
+};
 
 function addBook(event) {
   let title = newBookForm.elements.title.value;
