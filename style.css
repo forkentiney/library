@@ -84,7 +84,7 @@ header {
   padding: 32px;
 }
 
-.shelf {
+#shelf {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -147,7 +147,7 @@ header {
   padding: 0;
   background-color: var(--secondary);
   color: var(--primary);
-  margin: 0 24px 0 auto;
+  margin: 14px 24px 14px auto;
   display: flex;
   justify-content: center;
   align-items: center;
