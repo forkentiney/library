@@ -105,7 +105,7 @@ header {
   grid-template-rows: repeat(2, min-content);
   background-color: var(--bg-mantle);
   border: 2px solid var(--text);
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 36px 0.5px 0px 0px;
   padding: 24px 6px;
   box-shadow: 8px -4px 8px var(--shadow),
@@ -113,6 +113,7 @@ header {
   transition: transform 250ms;
   min-height: 128px;
   max-height: 296px;
+  user-select: none;
   z-index: 5;
 }
 
@@ -143,6 +144,7 @@ header {
 }
 
 #newButton {
+  padding: 0;
   background-color: var(--secondary);
   color: var(--primary);
   margin: 0 24px 0 auto;
