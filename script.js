@@ -36,11 +36,14 @@ function Book(title, author, year, status, id) {
   this.id = id;
 };
 
-function putBooksOnShelf() {
+function clearShelf() {
   while (shelf.childElementCount > 1) {
     shelf.removeChild(shelf.firstChild);
   };
+}
 
+function putBooksOnShelf() {
+  clearShelf();
   for (let i = 0; i < joshuasBooks.length; i++) {
     const book = document.createElement("div");
     const title = document.createElement("h2");
