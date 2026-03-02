@@ -191,7 +191,7 @@ button {
   transform: translate(-50%, -50%);
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 25px 1fr 1.5em;
-  gap: 4px;
+  gap: 12px;
   border: 2px solid var(--bg-crust);
   background-color: var(--bg-mantle);
   border-radius: 10px;
@@ -200,10 +200,11 @@ button {
   padding: 12px;
   img {
     grid-column: 1;
-    grid-row: 2 / 3;
-    border: 2px solid var(--highlight);
+    grid-row: 2 / 4;
+    border: 2px solid var(--shadow);
+    border-radius: 8px;
     height: 400px;
-    width: 200px;
+    width: auto;
     margin: auto;
   }
   h2,

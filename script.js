@@ -9,6 +9,7 @@ const infoAuthor = document.querySelector("#info-author");
 const infoYear = document.querySelector("#info-year");
 const infoStatus = document.querySelector("#info-status");
 const closeInfo = document.querySelector("#close-info");
+const cover = document.querySelector("#info-cover");
 
 const totalityAndInfinity = new Book("Totality and Infinity", "Emmanual Levinas", 1961, "read", "1");
 const beingAndTime = new Book("Being and Time", "Martin Heidegger", 1927, "read", "2");
@@ -44,6 +45,7 @@ function showInfo(id) {
   infoAuthor.textContent = book.author;
   infoYear.textContent = book.year;
   infoStatus.textContent = book.status;
+  cover.src = `static/images/${book.id}.jpg`;
 };
 
 function findBooks() {
