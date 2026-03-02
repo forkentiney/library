@@ -72,10 +72,6 @@ header {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 #body {
   display: flex;
   flex-direction: column;
@@ -185,4 +181,56 @@ button {
   border-radius: 6px;
   margin: 4px 0;
   background-color: var(--bg-base);
+}
+
+#info {
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 25px 1fr 1.5em;
+  gap: 4px;
+  border: 2px solid var(--bg-crust);
+  background-color: var(--bg-mantle);
+  border-radius: 10px;
+  margin: 8px auto;
+  box-shadow: 4px 4px 24px var(--shadow);
+  padding: 12px;
+  img {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    border: 2px solid var(--highlight);
+    height: 400px;
+    width: 200px;
+    margin: auto;
+  }
+  h2,
+  p,
+  a {
+    grid-column: 2;
+  }
+}
+
+#close-info {
+  color: var(--danger);
+  font-weight: 700;
+  font-size: 26px;
+  font-family: "Fira Code", sans-serif;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid {
+  display: grid;
 }
