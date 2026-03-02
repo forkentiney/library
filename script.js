@@ -24,7 +24,7 @@ uploadButton.addEventListener("click", addBook);
 closeInfo.addEventListener("click", function() {
   info.classList.add("hidden");
   info.classList.remove("grid");
-})
+});
 
 function hideForm() {
   newBookForm.classList.add("hidden");
