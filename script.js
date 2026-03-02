@@ -8,6 +8,7 @@ const infoTitle = document.querySelector("#info-title");
 const infoAuthor = document.querySelector("#info-author");
 const infoYear = document.querySelector("#info-year");
 const infoStatus = document.querySelector("#info-status");
+const closeInfo = document.querySelector("#close-info");
 
 const totalityAndInfinity = new Book("Totality and Infinity", "Emmanual Levinas", 1961, "read", "1");
 const beingAndTime = new Book("Being and Time", "Martin Heidegger", 1927, "read", "2");
@@ -20,6 +21,10 @@ let joshuasBooks = [totalityAndInfinity, beingAndTime, nineteenEightyFour, allQu
 cancel.addEventListener("click", hideForm);
 newButton.addEventListener("click", showForm);
 uploadButton.addEventListener("click", addBook);
+closeInfo.addEventListener("click", function() {
+  info.classList.add("hidden");
+  info.classList.remove("grid");
+})
 
 function hideForm() {
   newBookForm.classList.add("hidden");
@@ -34,6 +39,7 @@ function showInfo(id) {
   console.log(id);
   let book = joshuasBooks.find((book) => book.id === id);
   info.classList.remove("hidden");
+  info.classList.add("grid");
   infoTitle.textContent = book.title;
   infoAuthor.textContent = book.author;
   infoYear.textContent = book.year;
