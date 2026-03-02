@@ -3,7 +3,7 @@ const newButton = document.querySelector("#newButton");
 const uploadButton = document.querySelector("#submitNewBook");
 const cancel = document.querySelector("#cancel");
 const shelf = document.querySelector("#shelf");
-const books = document.querySelectorAll(".book");
+const info = document.querySelector("#info");
 
 const totalityAndInfinity = new Book("Totality and Infinity", "Emmanual Levinas", 1961, "read", "1");
 const beingAndTime = new Book("Being and Time", "Martin Heidegger", 1927, "read", "2");
@@ -26,8 +26,14 @@ function showForm() {
   newBookForm.classList.remove("hidden");
 };
 
-function showInfo(book) {
+function showInfo() {
+  info.classList.toggle("hidden");
 };
+
+function findBooks() {
+  const books = document.querySelectorAll(".book");
+  books.forEach((book) => book.addEventListener("click", showInfo));
+}
 
 function Book(title, author, year, status, id) {
   if (!new.target) {
@@ -61,7 +67,7 @@ function putBooksOnShelf() {
     book.appendChild(title);
     book.appendChild(author);
   };
-  books.forEach((book) => book.addEventListener("click", showInfo(book)));
+  findBooks();
 };
 
 function addBook(event) {
@@ -79,3 +85,4 @@ function addBook(event) {
 };
 
 putBooksOnShelf();
+findBooks();
